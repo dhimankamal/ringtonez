@@ -49,7 +49,10 @@ h2 {
 .navbar li a:hover {
   color: var(--orange);
 }
-
+.menuicon,
+.phone-login {
+  display: none;
+}
 .navbar #pull-right {
   float: right;
   align-items: center;
@@ -265,7 +268,82 @@ section {
   }
 }
 @media only screen and (max-width: 991px) {
-  .navbar .col-md-5 {
+  .menuicon,
+  .phone-login {
+    display: block;
+  }
+  .navbar .col-md-5 ul {
     display: none;
+  }
+  .navbar .menuicon img {
+    width: 4.5vw;
+    height: auto;
+    cursor: pointer;
+  }
+  .navbar .phone-login {
+    float: right;
+  }
+  .navbar .phone-login a {
+    text-decoration: none;
+    text-transform: lowercase;
+    color: var(--white);
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .search-input {
+    width: 600px;
+  }
+  .feature-post .row {
+    flex-direction: column-reverse;
+  }
+  .feature-post .row .col-md-6 {
+    width: 100%;
+  }
+  .post-img {
+    width: 100%;
+    top: 0;
+  }
+  .posts .col-md-12 {
+    height: auto;
+  }
+  .posts .feature-post {
+    margin: 50px 0 100px;
+  }
+
+  .top-searchs .col-md-4,
+  .footer .col-md-4,
+  .normal-post {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .search-input {
+    width: 100%;
+  }
+  .search-box .container {
+    height: 300px;
+  }
+  .posts .col-md-12 {
+    padding: 50px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .search-input {
+    height: 50px;
+  }
+  .search-input img {
+    width: 70%;
+  }
+  h2 {
+    font-size: 26px;
+  }
+  .posts p {
+    font-size: 16px;
+  }
+  .search-box .container {
+    height: 230px;
+  }
+  .search-box .container {
+    border-radius: 30px;
   }
 }
